@@ -1,0 +1,18 @@
+.poke__description__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 30px;
+}
+.image img {
+    height: 250px;
+    max-width: auto;
+}
+
+.list-group {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.list-item {
+    padding: 5px;
+}

@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+import { NextUIProvider } from "@nextui-org/react";
+import Navbar from "./components/shared/Navbar";
+import PokemonList from "./components/PokemonList";
+import { PokemonDescription } from "./components/PokemonDescription";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NextUIProvider>
+      <div className="App">        
+        <BrowserRouter>
+        <Navbar/>
+          <Routes>
+            <Route path="/" element={<PokemonList />} />
+            <Route path="/pokemon/:name" element={<PokemonDescription/>}/>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </NextUIProvider>
   );
 }
 
