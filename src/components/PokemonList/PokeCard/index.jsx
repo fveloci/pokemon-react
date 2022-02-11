@@ -8,12 +8,11 @@ const PokemonCard = (props) => {
     const [isLoading, setIsLoading] = useState(false)
     let navigate = useNavigate();
 
-    useEffect(() => {      
-      setIsLoading(true)
+    useEffect(() => {           
       getPokemonByName({name: props.pokemon.name}).then(async res => {
         const pokeImage = await res.data.sprites.front_default;
         setPokemonImage(pokeImage)
-      }).catch(e => console.log(e)).finally(setIsLoading(false))
+      }).catch(e => console.log(e)).finally(() => {})
     }, [])
     
     const navigateToPokemonPage = (name) => {

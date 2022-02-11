@@ -6,6 +6,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import Navbar from "./components/shared/Navbar";
 import PokemonList from "./components/PokemonList";
 import { PokemonDescription } from "./components/PokemonDescription";
+import { Footer } from "./components/shared/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<PokemonList />} />
             <Route path="/pokemon/:name" element={<PokemonDescription/>}/>
           </Routes>
+        <Footer/>
         </BrowserRouter>
       </div>
     </NextUIProvider>

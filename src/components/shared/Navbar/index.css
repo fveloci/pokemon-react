@@ -3,4 +3,12 @@
     height: 100px;     
     width: 100%;
     position: sticky;
+    display: flex;
+}
+#navbar-image {
+    height: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: auto;
+    cursor: pointer;
 }

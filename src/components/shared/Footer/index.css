@@ -1,0 +1,18 @@
+#footer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-shrink: initial;
+    justify-content: center;
+    background-color: red;
+    flex-direction: column;
+}
+#author {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+}
+#author__link {
+    padding: 10px;
+    font-weight: bold;
+}
